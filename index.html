@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>나의 삶 나의 철학</title>
+</head>
+
+<body style="background-color;blacks;color:white;">
+
+
+
+  <input type="button" value="night" onclick="dayhandle()">
+<script>
+function dayhandle() {
+  if(document.querySelector('body').dataset.mode==='day')
+  {
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('body').dataset.mode='night';
+    this.value='day';
+  }else{
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('body').dataset.mode='day';
+    this.value='night';
+  }
+}
+</script>
+
+<br>
+
+<img id="kim" onclick="changeimage()" src="11.jpg">
+
+<script>
+function changeimage() {
+    var image = document.getElementById('kim');
+    if (image.src.match("11")) {
+        image.src = "12.jpg";
+    } else {
+        image.src = "11.jpg";
+    }
+}
+</script>
+
+<br><br>
+<ol>
+<li><a href="1.html">"음식의 정수 제육볶음"</a></li>
+<li>이 시대 최고의 디저트 녹차 마카롱</li>
+<li>암흑의 힘 블랙 밀크티</li>
+</ol>
+<ul>
+<li><input type="button" value="맛에 관한 분석" onclick="alert('아 깜짝이야')"></li>
+<li>흑석 최고의 식당</li>
+<li>더 맛있게 하기 위한 방법</li>
+</ul>
+
+</body>
+
+</html>
